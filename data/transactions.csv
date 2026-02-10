@@ -1,0 +1,8 @@
+transaction_id,customer_id,merchant,amount,date,customer_tier
+TXN001,CUST-9921,Amazon.com,15.50,2026-02-01,Gold
+TXN002,CUST-9921,Starbucks,4.25,2026-02-02,Gold
+TXN003,CUST-4402,Apple Store,1200.00,2026-02-03,Silver
+TXN004,CUST-3310,Delta Airlines,450.00,2026-02-04,Platinum
+TXN005,CUST-5589,Unknown Merchant,85.00,2026-02-05,Standard
+TXN006,CUST-1122,Walmart,25.00,2026-02-05,Standard
+TXN007,CUST-1122,Walmart,25.00,2026-02-05,Standard

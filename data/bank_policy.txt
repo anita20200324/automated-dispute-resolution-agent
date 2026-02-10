@@ -1,0 +1,42 @@
+# GLOBAL RETAIL BANK (GRB) - DISPUTE RESOLUTION & SETTLEMENT POLICY (2026)
+
+## SECTION 1: AUTOMATED SETTLEMENT & STRAIGHT-THROUGH PROCESSING (STP)
+1.1 Low-Value Write-Off Rule: 
+For non-fraudulent disputes where the transaction amount is $25.00 USD or less, the system shall execute an automatic "Low-Value Write-Off." 
+- Applicable Reason Codes: "Services Not Rendered" or "Incorrect Amount Billed."
+- Limitation: Maximum of 3 automated write-offs per account per calendar month.
+
+1.2 Duplicate Transaction Rule:
+If two transactions occur within 24 hours with the same Merchant ID and identical Amount, the system shall flag the second transaction as a "Potential Duplicate." 
+- Action: Automated initiation of a "Duplicate Processing" dispute workflow.
+
+## SECTION 2: REGULATION E (REG E) COMPLIANCE STANDARDS
+2.1 Scope: 
+Applies to all consumer electronic fund transfers (EFT) including Debit Card, ATM, and ACH transactions.
+
+2.2 Provisional Credit (PC) Timeline:
+If a dispute investigation cannot be completed within 10 business days of the initial claim notice, the bank must grant the consumer a "Provisional Credit" for the full amount of the dispute.
+- Notification: The customer must be notified of the credit within 2 business days of the credit being issued.
+
+2.3 Investigation Deadlines:
+- Standard Investigation: Must be resolved within 45 days.
+- Extended Investigation: Up to 90 days allowed for point-of-sale (POS) debit card transactions or foreign/international transactions.
+
+## SECTION 3: CARD NETWORK RULES (VCR & MCOM)
+3.1 Visa Claims Resolution (VCR):
+- Reason Code 10.4 (Other Fraud): If a transaction was processed with 3D Secure (3DS) authentication, the bank shall automatically deny the dispute due to liability shift.
+- Allocation Disputes: Responses to network inquiries must be submitted within 20 calendar days.
+
+3.2 Mastercard Mastercom (MCOM):
+- Collaboration Layer: All merchant-initiated "pre-dispute" resolutions must be accepted if the merchant provides valid proof of refund within the Mastercom portal.
+
+## SECTION 4: FRAUD & RISK SCORING
+4.1 CDH Integration Rule:
+For all unauthorized transaction claims, the system must invoke the Customer Decision Hub (CDH) Risk Score.
+- Score < 30 (Low Risk): AI Agent is authorized to suggest immediate "Resolution in Favor of Customer."
+- Score > 70 (High Risk): AI Agent must escalate the case to the Special Investigations Unit (SIU) for manual fraud review.
+
+## SECTION 5: CUSTOMER COMMUNICATION
+5.1 Final Resolution Notice:
+Upon closing a case, the system must generate a formal "Resolution Letter."
+- If Denied: The letter must state the specific reason and notify the customer of their right to request the documents used in the investigation.
