@@ -1,8 +1,101 @@
-transaction_id,customer_id,merchant,amount,date,customer_tier
-TXN001,CUST-9921,Amazon.com,15.50,2026-02-01,Gold
-TXN002,CUST-9921,Starbucks,4.25,2026-02-02,Gold
-TXN003,CUST-4402,Apple Store,1200.00,2026-02-03,Silver
-TXN004,CUST-3310,Delta Airlines,450.00,2026-02-04,Platinum
-TXN005,CUST-5589,Unknown Merchant,85.00,2026-02-05,Standard
-TXN006,CUST-1122,Walmart,25.00,2026-02-05,Standard
-TXN007,CUST-1122,Walmart,25.00,2026-02-05,Standard
+transaction_id,customer_id,customer_name,merchant,amount,date,status
+TXN-001,CUST-015,Customer 15,Shell,217.37,2026-02-05,Standard
+TXN-002,CUST-013,Customer 13,Walmart,382.53,2026-02-07,Settled
+TXN-003,CUST-002,Customer 2,Shell,5.99,2026-02-09,Standard
+TXN-004,CUST-014,Customer 14,Amazon,100.26,2026-02-03,Standard
+TXN-005,CUST-009,Customer 9,Apple Store,18.72,2026-02-04,Standard
+TXN-006,CUST-013,Customer 13,Shell,387.34,2026-02-06,Disputed
+TXN-007,CUST-009,Customer 9,Shell,190.28,2026-02-03,Disputed
+TXN-008,CUST-010,Customer 10,Shell,314.31,2026-02-06,Settled
+TXN-009,CUST-015,Customer 15,Amazon,292.04,2026-02-01,Settled
+TXN-010,CUST-015,Customer 15,Shell,180.41,2026-02-04,Standard
+TXN-011,CUST-013,Customer 13,Shell,221.26,2026-02-01,Standard
+TXN-012,CUST-004,Customer 4,Walmart,207.63,2026-02-07,Standard
+TXN-013,CUST-010,Customer 10,Amazon,462.23,2026-02-05,Disputed
+TXN-014,CUST-009,Customer 9,Apple Store,453.05,2026-02-11,Standard
+TXN-015,CUST-004,Customer 4,Starbucks,327.42,2026-02-07,Settled
+TXN-016,CUST-002,Customer 2,Amazon,426.47,2026-02-02,Standard
+TXN-017,CUST-014,Customer 14,Apple Store,9.77,2026-02-07,Standard
+TXN-018,CUST-011,Customer 11,Amazon,304.26,2026-02-01,Standard
+TXN-019,CUST-008,Customer 8,Apple Store,334.95,2026-02-05,Standard
+TXN-020,CUST-007,Customer 7,Netflix,211.87,2026-02-05,Pending
+TXN-021,CUST-007,Customer 7,Apple Store,277.51,2026-02-03,Standard
+TXN-022,CUST-008,Customer 8,Apple Store,93.81,2026-02-07,Pending
+TXN-023,CUST-013,Customer 13,Shell,387.02,2026-02-07,Standard
+TXN-024,CUST-011,Customer 11,Walmart,497.19,2026-02-01,Settled
+TXN-025,CUST-011,Customer 11,Amazon,361.99,2026-02-10,Standard
+TXN-026,CUST-008,Customer 8,Walmart,423.95,2026-02-03,Standard
+TXN-027,CUST-014,Customer 14,Netflix,199.1,2026-02-11,Settled
+TXN-028,CUST-004,Customer 4,Amazon,336.22,2026-02-09,Standard
+TXN-029,CUST-013,Customer 13,Netflix,150.96,2026-02-04,Standard
+TXN-030,CUST-003,Customer 3,Apple Store,474.4,2026-02-03,Standard
+TXN-031,CUST-012,Customer 12,Apple Store,255.01,2026-02-04,Standard
+TXN-032,CUST-012,Customer 12,Shell,223.82,2026-02-07,Standard
+TXN-033,CUST-009,Customer 9,Amazon,403.72,2026-02-08,Standard
+TXN-034,CUST-007,Customer 7,Walmart,213.79,2026-02-05,Settled
+TXN-035,CUST-015,Customer 15,Walmart,161.68,2026-02-03,Standard
+TXN-036,CUST-009,Customer 9,Starbucks,206.19,2026-02-10,Standard
+TXN-037,CUST-002,Customer 2,Shell,294.01,2026-02-11,Standard
+TXN-038,CUST-007,Customer 7,Walmart,9.56,2026-02-04,Standard
+TXN-039,CUST-005,Customer 5,Amazon,158.09,2026-02-09,Standard
+TXN-040,CUST-002,Customer 2,Starbucks,88.84,2026-02-03,Standard
+TXN-041,CUST-006,Customer 6,Starbucks,288.23,2026-02-08,Standard
+TXN-042,CUST-010,Customer 10,Shell,499.81,2026-02-04,Standard
+TXN-043,CUST-013,Customer 13,Apple Store,67.54,2026-02-05,Pending
+TXN-044,CUST-014,Customer 14,Apple Store,347.7,2026-02-11,Settled
+TXN-045,CUST-014,Customer 14,Starbucks,314.02,2026-02-03,Settled
+TXN-046,CUST-015,Customer 15,Netflix,43.27,2026-02-01,Standard
+TXN-047,CUST-008,Customer 8,Amazon,28.89,2026-02-03,Settled
+TXN-048,CUST-006,Customer 6,Amazon,350.93,2026-02-06,Standard
+TXN-049,CUST-008,Customer 8,Netflix,102.45,2026-02-11,Settled
+TXN-050,CUST-012,Customer 12,Walmart,458.01,2026-02-09,Standard
+TXN-051,CUST-009,Customer 9,Starbucks,406.32,2026-02-07,Settled
+TXN-052,CUST-003,Customer 3,Starbucks,13.6,2026-02-05,Standard
+TXN-053,CUST-007,Customer 7,Shell,270.61,2026-02-02,Standard
+TXN-054,CUST-006,Customer 6,Starbucks,5.48,2026-02-07,Standard
+TXN-055,CUST-003,Customer 3,Walmart,285.04,2026-02-01,Standard
+TXN-056,CUST-011,Customer 11,Amazon,217.2,2026-02-03,Disputed
+TXN-057,CUST-007,Customer 7,Starbucks,105.13,2026-02-02,Standard
+TXN-058,CUST-013,Customer 13,Walmart,430.78,2026-02-05,Standard
+TXN-059,CUST-006,Customer 6,Shell,257.53,2026-02-02,Standard
+TXN-060,CUST-002,Customer 2,Starbucks,127.93,2026-02-01,Settled
+TXN-061,CUST-015,Customer 15,Starbucks,154.15,2026-02-01,Standard
+TXN-062,CUST-014,Customer 14,Walmart,339.49,2026-02-05,Standard
+TXN-063,CUST-011,Customer 11,Amazon,377.5,2026-02-11,Standard
+TXN-064,CUST-002,Customer 2,Shell,419.55,2026-02-09,Settled
+TXN-065,CUST-009,Customer 9,Shell,489.23,2026-02-02,Standard
+TXN-066,CUST-001,Customer 1,Apple Store,158.87,2026-02-05,Standard
+TXN-067,CUST-008,Customer 8,Starbucks,170.65,2026-02-06,Standard
+TXN-068,CUST-001,Customer 1,Apple Store,416.97,2026-02-02,Settled
+TXN-069,CUST-009,Customer 9,Netflix,136.07,2026-02-05,Standard
+TXN-070,CUST-006,Customer 6,Starbucks,478.89,2026-02-03,Settled
+TXN-071,CUST-011,Customer 11,Netflix,33.75,2026-02-05,Standard
+TXN-072,CUST-005,Customer 5,Shell,169.61,2026-02-02,Standard
+TXN-073,CUST-008,Customer 8,Netflix,211.39,2026-02-01,Settled
+TXN-074,CUST-007,Customer 7,Shell,242.41,2026-02-11,Standard
+TXN-075,CUST-004,Customer 4,Starbucks,470.78,2026-02-09,Standard
+TXN-076,CUST-005,Customer 5,Netflix,118.7,2026-02-03,Standard
+TXN-077,CUST-007,Customer 7,Netflix,138.51,2026-02-03,Disputed
+TXN-078,CUST-012,Customer 12,Starbucks,30.93,2026-02-08,Standard
+TXN-079,CUST-009,Customer 9,Walmart,284.18,2026-02-06,Standard
+TXN-080,CUST-012,Customer 12,Netflix,43.57,2026-02-11,Standard
+TXN-081,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-02,Disputed
+TXN-082,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-06,Disputed
+TXN-083,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-01,Disputed
+TXN-084,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-07,Disputed
+TXN-085,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-08,Disputed
+TXN-086,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-10,Disputed
+TXN-087,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-09,Disputed
+TXN-088,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-03,Disputed
+TXN-089,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-06,Disputed
+TXN-090,FRAUD_VELOCITY,James Rodriguez,Crypto.com,2000.0,2026-02-06,Disputed
+TXN-091,FRAUD_SPIKE,Sarah Chen,Luxury Watches,5230.846363502245,2026-02-09,Pending
+TXN-092,FRAUD_SPIKE,Sarah Chen,Luxury Watches,6285.627904636981,2026-02-07,Pending
+TXN-093,FRAUD_SPIKE,Sarah Chen,Luxury Watches,6392.104543981795,2026-02-03,Pending
+TXN-094,FRAUD_SPIKE,Sarah Chen,Luxury Watches,5166.831593183018,2026-02-07,Pending
+TXN-095,FRAUD_SPIKE,Sarah Chen,Luxury Watches,6078.746910518529,2026-02-02,Pending
+TXN-096,FRAUD_SPIKE,Sarah Chen,Luxury Watches,7933.169915024854,2026-02-06,Pending
+TXN-097,FRAUD_SPIKE,Sarah Chen,Luxury Watches,8677.246037948182,2026-02-05,Pending
+TXN-098,FRAUD_SPIKE,Sarah Chen,Luxury Watches,6655.125216304417,2026-02-02,Pending
+TXN-099,FRAUD_SPIKE,Sarah Chen,Luxury Watches,6436.13529918498,2026-02-11,Pending
+TXN-100,FRAUD_SPIKE,Sarah Chen,Luxury Watches,5615.390449535747,2026-02-01,Pending

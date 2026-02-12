@@ -4,14 +4,14 @@ from openai import OpenAI
 import chromadb
 from chromadb.utils import embedding_functions
 
-# Initialize environment and keys
+# --- Initialize environment and keys ---
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 # Set up OpenAI Client
 client_ai = OpenAI(api_key=api_key)
 
-# Connect to the existing Vector Database (ChromaDB)
+# --- Connect to the existing Vector Database (ChromaDB) ---
 client_db = chromadb.PersistentClient(path="./chroma_db")
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
     api_key=api_key,
@@ -22,29 +22,51 @@ collection = client_db.get_or_create_collection(
     embedding_function=openai_ef
 )
 
+# --- FIXED: Fraud Detection Function (Step 1) ---
+def detect_fraud_risk(transaction_data, customer_input):
+    """
+    Analyzes transaction patterns for risk before checking policy.
+    Now checks for Serial Disputers and Velocity Attacks.
+    """
+    # We put the prompt INSIDE the function so it can use the variables
+    fraud_prompt = f"""
+    You are a Fraud Detection Expert. Identify if this is a 'Serial Disputer' or 'Velocity Attack'.
+    
+    【Transaction Data】: {transaction_data}
+    【Customer Claim】: {customer_input}
+
+    Check for these Red Flags:
+    1. Is the amount unusually high (e.g., a $5,000 spike)?
+    2. Is the user mentioning 'multiple', 'all', or 'other' charges?
+    3. Does the transaction status suggest an ongoing attack?
+
+    Output Format:
+    Risk Level: [Low/Medium/High]
+    Reason: [Short explanation in English]
+    """
+
+    response = client_ai.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": fraud_prompt}]
+    )
+    return response.choices[0].message.content
+
+# --- EXISTING: Dispute Analysis Function (Step 2) ---
 def analyze_dispute(customer_query, transaction_amount):
     """
     Processes a dispute claim by retrieving relevant policy and reasoning with an LLM.
-    
-    Args:
-        customer_query (str): The reason provided by the customer for the dispute.
-        transaction_amount (float): The dollar value of the transaction.
-        
-    Returns:
-        str: The AI-generated decision recommendation.
     """
-    
-    # 1. RETRIEVAL: Find relevant bank policy sections using semantic search
+    # 1. RETRIEVAL: Find relevant bank policy sections
     results = collection.query(
         query_texts=[customer_query],
-        n_results=1  # Get the single most relevant policy section
+        n_results=1 
     )
     relevant_policy = results['documents'][0]
 
-    # 2. PROMPT ENGINEERING: Ground the AI in specific facts and policies
+    # 2. PROMPT ENGINEERING
     system_prompt = f"""
     You are an expert Bank Dispute Resolution Officer.
-    Your task is to decide if a claim should be 'Approved' or 'Denied' based on the policy below.
+    Decide if a claim is 'Approved' or 'Denied' based on the policy below.
     
     【BANK POLICY】:
     {relevant_policy}
@@ -53,7 +75,7 @@ def analyze_dispute(customer_query, transaction_amount):
     Amount: ${transaction_amount}
     """
 
-    # 3. GENERATION: Call GPT-4o to make a reasoned decision
+    # 3. GENERATION
     response = client_ai.chat.completions.create(
         model="gpt-4o",
         messages=[

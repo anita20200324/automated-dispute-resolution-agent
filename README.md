@@ -27,6 +27,10 @@ Operational Efficiency: Modeled after Pega Smart Dispute, this AI Agent demonstr
 🚀 Key Features
 Policy-Grounded Decisioning: Eliminates AI hallucinations by forcing the model to cite specific sections of the bank’s internal handbook.
 
+Integrated Fraud Layer: Pre-screens every dispute for behavioral anomalies using GPT-4o before accessing the Vector DB.
+
+Automated Triage: Automatically routes high-risk cases to the Special Investigations Unit (SIU), reducing the workload on standard adjusters.
+
 Structured Output: Outputs decisions in JSON format, making it compatible with legacy systems like Pega, Salesforce, or custom ERPs.
 
 Fintech Domain Logic: Built-in understanding of Regulation E and STP (Straight-Through Processing) thresholds.
