@@ -3,9 +3,9 @@ import pandas as pd
 from agent import analyze_dispute, detect_fraud_risk 
 
 # --- Page Configuration ---
-st.set_page_config(page_title="GRB Smart Dispute AI", layout="wide")
+st.set_page_config(page_title="GRB Automatic Dispute AI", layout="wide")
 
-st.title("🏦 Global Retail Bank: Smart Dispute AI")
+st.title("🏦 Global Retail Bank:  Automatic Dispute resoltion AI")
 st.markdown("### AI-Powered Agentic Dispute Resolution Dashboard")
 st.info("Multi-stage pipeline: Fraud Screening followed by RAG-based Policy Compliance.")
 
